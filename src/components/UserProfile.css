@@ -1,0 +1,30 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    text-align: center;
+}
+
+.fields-list li:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.fields-list li div{
+    word-wrap: break-word;
+}
+
+.avatar {
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        display: block;
+    }
+    
+}
