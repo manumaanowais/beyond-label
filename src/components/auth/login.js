@@ -20,6 +20,7 @@ const Login = () => {
     let navigate = useNavigate();
 
     const [showPassword, setShowPassword] = useState(false);
+    const [isSubmissionComplete, setIsSubmissionComplete] = useState(false);
 
     const redirectToSignUp = () => {
         navigate(`/signup`);
@@ -40,7 +41,8 @@ const Login = () => {
     })
 
     const signInSubmit = (values, props) => {
-        console.log("Values : ", values)
+        console.log("Values : ", values);
+        setIsSubmissionComplete(true);
         signInWithEmailAndPassword(auth, values.email, values.password)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -75,6 +77,7 @@ const Login = () => {
             })
             .catch((error) => {
                 console.log(error);
+                setIsSubmissionComplete(false);
                 Swal.fire({
                     icon: 'error',
                     title: `Invalid Credentials`,
@@ -123,8 +126,8 @@ const Login = () => {
                             <Typography> Don't have an account?
                                 <Link style={{ cursor: 'pointer', textDecoration: 'none' }} onClick={redirectToSignUp}>&nbsp;Sign Up</Link>
                             </Typography>
-                            <Button type='submit' color='primary' variant="contained" disabled={props.isSubmitting}
-                                style={btnstyle} fullWidth>{props.isSubmitting ? 'Loading...' : 'Sign in'}</Button>
+                            <Button type='submit' color='primary' variant="contained" disabled={isSubmissionComplete}
+                                style={btnstyle} fullWidth>{isSubmissionComplete ? 'Loading...' : 'Sign in'}</Button>
 
                         </Form>
                     )}
