@@ -14,6 +14,7 @@ import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import Swal from 'sweetalert2';
 import Tooltip from '@material-ui/core/Tooltip';
+import CartCount from "./CartCount";
 
 function Header() {
     const [open, setOpen] = useState(false);
@@ -42,8 +43,8 @@ function Header() {
         alert("Favourites clicked");
     }
 
-    const handleCartOpen = () => {
-        alert("Cart clicked");
+    const handleCartOpen = () => {  
+        navigate(`/cart`); 
     }
 
     const handleLogout = () => {
@@ -91,7 +92,7 @@ function Header() {
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleFavouritesOpen}><FavoriteBorderOutlinedIcon /></IconButton>
                         </Tooltip>
                         <Tooltip title="Cart" arrow>
-                            <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleCartOpen}><ShoppingCartOutlinedIcon /></IconButton>
+                            <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleCartOpen}><ShoppingCartOutlinedIcon /><CartCount /></IconButton>
                         </Tooltip>
                         <Tooltip title="Logout" arrow>
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleLogout}><ExitToAppOutlinedIcon /></IconButton>
