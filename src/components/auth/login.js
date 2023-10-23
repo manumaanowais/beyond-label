@@ -13,7 +13,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const paperStyle = { padding: 20, height: '75vh', width: 280, margin: '40px auto' };
+    const paperStyle = { padding: 20, width: 280, margin: '40px auto' };
     const avatarStyle = { backgroundColor: '#6495ED' };
     const btnstyle = { margin: '8px 0' };
 

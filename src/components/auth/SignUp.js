@@ -177,7 +177,7 @@ const Signup = () => {
                             <FormHelperText><ErrorMessage name="termsAndConditions" /></FormHelperText>
                             <div style={{ display: 'flex', gap: '8px' }}>
                                 <Button style={{ width: '-webkit-fill-available' }} type='submit' disabled={props.isSubmitting} variant='contained' color='primary'>
-                                    {props.isSubmitting ? "Loading" : "Sign up"}
+                                    {props.isSubmitting ? "Loading..." : "Sign up"}
                                 </Button>
                                 <Button style={{ width: '-webkit-fill-available' }} type='button' variant='outlined' color='primary' onClick={cancelSignUp}>
                                     Cancel
