@@ -7,7 +7,7 @@ function CartCount() {
 
   if (state.cartCount > 0) {
     return (
-      <div style={{ backgroundColor: 'orangered', fontSize: '16px', borderRadius: '5px', marginTop: '10px' }}>
+      <div style={{ backgroundColor: 'orangered', fontSize: '10px', borderRadius: '10px', marginTop: '10px', padding: '3px' }}>
         {state.cartCount}
       </div>
     );

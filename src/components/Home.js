@@ -64,7 +64,9 @@ function Home() {
               <i className="fa fa-star"></i>
               <i className="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
           <div className="col-4">
             <Link to="/image/product-2">
@@ -78,7 +80,9 @@ function Home() {
               <i className="fa fa-star-half-o"></i>
               <i className="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
           <div className="col-4">
             <Link to="/image/product-3">
@@ -92,7 +96,9 @@ function Home() {
               <i className="fa fa-star"></i>
               <i className="fa fa-star-half-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
           <div className="col-4">
             <Link to="/image/product-4">
@@ -106,7 +112,9 @@ function Home() {
               <i className="fa fa-star"></i>
               <i className="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
         </div>
         <h2 className="title">Latest Products</h2>
@@ -123,7 +131,9 @@ function Home() {
               <i className="fa fa-star"></i>
               <i className="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
           <div className="col-4">
             <Link to="/image/product-6">
@@ -137,7 +147,9 @@ function Home() {
               <i className="fa fa-star-half-o"></i>
               <i className="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
           <div className="col-4">
             <Link to="/image/product-7">
@@ -151,7 +163,9 @@ function Home() {
               <i className="fa fa-star"></i>
               <i className="fa fa-star-half-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
           <div className="col-4">
             <Link to="/image/product-8">
@@ -165,7 +179,9 @@ function Home() {
               <i className="fa fa-star"></i>
               <i className="fa fa-star-o"></i>
             </div>
-            <p>$50.00</p>
+            <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+            </svg>50.00</p>
           </div>
           <div className="row">
             <div className="col-4">
@@ -180,7 +196,9 @@ function Home() {
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star-o"></i>
               </div>
-              <p>$50.00</p>
+              <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+              </svg>50.00</p>
             </div>
             <div className="col-4">
               <Link to="/image/product-10">
@@ -194,7 +212,9 @@ function Home() {
                 <i className="fa fa-star-half-o"></i>
                 <i className="fa fa-star-o"></i>
               </div>
-              <p>$50.00</p>
+              <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+              </svg>50.00</p>
             </div>
             <div className="col-4">
               <Link to="/image/product-11">
@@ -208,7 +228,9 @@ function Home() {
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star-half-o"></i>
               </div>
-              <p>$50.00</p>
+              <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+              </svg>50.00</p>
             </div>
             <div className="col-4">
               <Link to="/image/product-12">
@@ -222,7 +244,9 @@ function Home() {
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star-o"></i>
               </div>
-              <p>$50.00</p>
+              <p className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+              </svg>50.00</p>
             </div>
           </div>
 

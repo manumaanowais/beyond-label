@@ -467,6 +467,11 @@ select:focus
 	flex-basis:30%;
 	cursor:pointer;
 }
+
+.inr-svg{
+	display: flex;
+}
+
 /*-----------cart items--------------*/
 .cart-page
 {
@@ -481,6 +486,7 @@ table
 {
 	display:flex;
 	flex-wrap:wrap;
+	align-items: center;
 }
 th
 {
@@ -530,6 +536,46 @@ td:last-child
 th:last-child
 {
 	text-align:right;
+}
+
+.cart-action {
+	color: orangered !important;
+}
+
+.increment-decrement-btn {
+    .decrement-btn {
+        width: 30%;
+        outline: none;
+        border: 2px solid red;
+        border-radius: 4px;
+        background-color: white;
+        color: red;
+    }
+
+    .decrement-btn:hover {
+        color: white;
+		cursor: pointer;
+        background-color: red;
+    }
+
+    .increment-btn {
+        width: 30%;
+        outline: none;
+        border: 2px solid green;
+        border-radius: 4px;
+        background-color: white;
+        color: green;
+    }
+
+    .increment-btn:hover {
+		cursor: pointer;
+        color: white;
+        background-color: green;
+    }
+
+	.quantity-count {
+		padding: 4px;
+	}
 }
 
 
