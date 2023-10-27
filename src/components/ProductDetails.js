@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
@@ -18,6 +18,10 @@ function ProductDetails({ product }) {
     const [quantity, setQuantity] = useState(1);
 
     let navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleGalleryImageClick = (image) => {
         setMainImage(image);
