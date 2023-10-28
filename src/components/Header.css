@@ -1,5 +1,9 @@
+.main-header header {
+    background-color: black;
+}
+
 .header {
-    background-color: #333;
+    background-color: blanchedalmond;
     color: #fff;
     display: flex;
     justify-content: space-between;

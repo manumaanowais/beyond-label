@@ -3,13 +3,43 @@ import Header from './Header';
 import './Home.css';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+
+const useStyles = makeStyles({
+  root: {
+    flexGrow: 1,
+    maxWidth: 500,
+  },
+});
 
 function Home() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleNewDropsClick = () => {
+    document.getElementById('newDropsProducts').scrollIntoView();
+  }
+
+  const handleTrendingClick = () => {
+    document.getElementById('trendingProducts').scrollIntoView();
+  }
+
+  const handleLatestClick = () => {
+    document.getElementById('latestProducts').scrollIntoView();
+  }
+
   return (
     <div className='home-page'>
       <Header />
       <div className='main-home-content'>
-        <div>
+        <div className='header'>
           <div className="row">
             <div className="col-2">
               <h1>Give Your Workout<br />A New Style!</h1>
@@ -21,10 +51,27 @@ function Home() {
             </div>
           </div>
         </div>
-      </div><br /><br />
+      </div>
+
+      {/* Tabs */}
+      <div className='home-page-tabs'>
+        <Paper square className={classes.root}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            indicatorColor="secondary"
+            textColor="secondary"
+            aria-label="icon label tabs example"
+          >
+            <Tab label="NEW DROPS" onClick={handleNewDropsClick}/>
+            <Tab label="TRENDING" onClick={handleTrendingClick} />
+            <Tab label="LATEST" onClick={handleLatestClick} />
+          </Tabs>
+        </Paper>
+      </div>
 
       {/* featured categories */}
-
       <div className="categories">
         <div className="small-container">
           <div className="row">
@@ -50,7 +97,7 @@ function Home() {
       {/* featured products */}
 
       <div className="small-container">
-        <h2 className="title">Featured Products</h2>
+        <h2 className="title" id='newDropsProducts'>New Drops</h2>
         <div className="row">
           <div className="col-4">
             <Link to="/image/product-1">
@@ -117,7 +164,7 @@ function Home() {
             </svg>50.00</p>
           </div>
         </div>
-        <h2 className="title">Latest Products</h2>
+        <h2 className="title" id='trendingProducts'>Trending Products</h2>
         <div className="row">
           <div className="col-4">
             <Link to="/image/product-5">
@@ -183,6 +230,8 @@ function Home() {
               <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
             </svg>50.00</p>
           </div>
+
+          <h2 className="title" id='latestProducts'>Latest Products</h2>
           <div className="row">
             <div className="col-4">
               <Link to="/image/product-9">

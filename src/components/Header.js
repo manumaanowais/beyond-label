@@ -76,7 +76,7 @@ function Header() {
     }
 
     return (
-        <div>
+        <div className="main-header">
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleDrawerOpen}><MenuIcon /></IconButton>
@@ -108,10 +108,15 @@ function Header() {
                 </div>
                 <Divider />
                 <List>
+                    <ListItem button component={Link} to="/profile">
+                        <Tooltip title="User Profile" arrow>
+                            <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleProfileOpen}><PersonOutlinedIcon /></IconButton>
+                        </Tooltip>
+                    </ListItem>
                     <ListItem button component={Link} to="/home"><ListItemText primary="Home" /></ListItem>
-                    <ListItem button component={Link} to="/about"><ListItemText primary="About" /></ListItem>
+                    <ListItem button component={Link} to="/cart"><ListItemText primary="Cart" /><CartCount /></ListItem>
                     <ListItem button component={Link} to="/services"><ListItemText primary="Services" /></ListItem>
-                    <ListItem button component={Link} to="/contact"><ListItemText primary="Contact" /></ListItem>
+                    <ListItem button component={Link} to="/contact"><ListItemText primary="Customer Support" /></ListItem>
                 </List>
             </Drawer>
             {searchOpen && (
