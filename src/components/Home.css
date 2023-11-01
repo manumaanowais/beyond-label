@@ -2,6 +2,27 @@
     padding: 20px;
 }
 
+.slider-images {
+    width: auto;
+    height: 500px;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.next-btn, .prev-btn {
+    border-radius: 10px;
+    background-color: orangered;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
 .home-page-tabs {
     display: flex;
     justify-content: center;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useCallback, useMemo} from 'react'
 import Header from './Header';
 import './Home.css';
 import Footer from './Footer';
@@ -35,40 +35,81 @@ function Home() {
     document.getElementById('latestProducts').scrollIntoView();
   }
 
+
+  const carouselContent = useMemo(() => [
+    {
+      image: `${process.env.PUBLIC_URL}/assets/image1.jpg`,
+      title: 'Give Your Workout A New Style!',
+      description: "Success isn't always about greatness. It's about consistency. Consistent hardwork gains success. Greatness will come",
+      link: '/home',
+      backgroundColor: '#e6e6e6'
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/sliderimage-1.jpg`,
+      title: 'Winter Sale 50% Off',
+      description: 'Find The Boundaries. Push Through!',
+      link: '/image/sliderimage-1',
+      backgroundColor: 'white',
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/sliderimage-2.jpg`,
+      title: "Men's Latest Fashion Sale",
+      description: 'Starting at RS. 999',
+      link: '/image/sliderimage-2',
+      backgroundColor: 'white',
+    },
+    // Add more content objects as needed
+  ], []);
+
+  const [currentContentIndex, setCurrentContentIndex] = useState(0);
+
+  const nextContent = useCallback(() => {
+    setCurrentContentIndex((prevIndex) => (prevIndex + 1) % carouselContent.length);
+  }, [carouselContent]);
+
+  const prevContent = useCallback(() => {
+    setCurrentContentIndex((prevIndex) =>
+      prevIndex === 0 ? carouselContent.length - 1 : prevIndex - 1
+    );
+  }, [carouselContent]);
+
+  useEffect(() => {
+    const interval = setInterval(nextContent, 3000); // Auto slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [currentContentIndex, nextContent]);
+
+
+  const currentContent = carouselContent[currentContentIndex];
+
   return (
     <div className='home-page'>
       <Header />
+      {/* eslint-disable-next-line */}
+      <marquee style={{ fontSize: '18px', paddingTop: '10px' }}>Trendiest Sale Is Live! Get 50% Off On Your Favourite Outfits</marquee>
       <div className='main-home-content'>
-        <div className='header'>
+        <div className='header' style={{ backgroundColor: currentContent.backgroundColor }}>
           <div className="row">
             <div className="col-2">
-              <h1>Give Your Workout<br />A New Style!</h1>
-              <p>Success isn't always about greatness. It's about consistency. Consistent <br />hardwork gains success. Greatness will come</p>
-              <Link to='/home' className="btn">Explore Now &#8594;</Link>
+              <h1>{currentContent.title}</h1>
+              <p>{currentContent.description}</p>
+              <Link to={currentContent.link} className="btn">
+                Explore Now &#8594;
+              </Link>
             </div>
             <div className="col-2">
-              <img alt='products' src={`${process.env.PUBLIC_URL}/assets/image1.jpg`} />
+              <img className='slider-images' alt='products' src={currentContent.image} />
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Tabs */}
-      <div className='home-page-tabs'>
-        <Paper square className={classes.root}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="fullWidth"
-            indicatorColor="secondary"
-            textColor="secondary"
-            aria-label="icon label tabs example"
-          >
-            <Tab label="NEW DROPS" onClick={handleNewDropsClick}/>
-            <Tab label="TRENDING" onClick={handleTrendingClick} />
-            <Tab label="LATEST" onClick={handleLatestClick} />
-          </Tabs>
-        </Paper>
+        <div className="slider-buttons">
+          <button onClick={prevContent} className="prev-btn">
+            &#10094;
+          </button>
+          <button onClick={nextContent} className="next-btn">
+            &#10095;
+          </button>
+        </div>
       </div>
 
       {/* featured categories */}
@@ -92,6 +133,24 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Tabs */}
+      <div className='home-page-tabs'>
+        <Paper square className={classes.root}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="fullWidth"
+            indicatorColor="secondary"
+            textColor="secondary"
+            aria-label="icon label tabs example"
+          >
+            <Tab label="NEW DROPS" onClick={handleNewDropsClick} />
+            <Tab label="TRENDING" onClick={handleTrendingClick} />
+            <Tab label="LATEST" onClick={handleLatestClick} />
+          </Tabs>
+        </Paper>
       </div>
 
       {/* featured products */}
