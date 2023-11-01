@@ -145,7 +145,7 @@ function ProductDetails({ product }) {
             <div className="small-container">
                 <div className="row">
                     <div className="col-4">
-                        <Link to="/image/product-9">
+                        <Link to="/product-details/product-9">
                             <img src={`${process.env.PUBLIC_URL}/assets/product-9.jpg`} alt="product" onClick={() => handleGalleryImageClick(`${process.env.PUBLIC_URL}/assets/product-9.jpg`)} />
                         </Link>
                         <h4>Roadster Watches</h4>
@@ -161,7 +161,7 @@ function ProductDetails({ product }) {
                         </svg>50.00</p>
                     </div>
                     <div className="col-4">
-                        <Link to="/image/product-10">
+                        <Link to="/product-details/product-10">
                             <img src={`${process.env.PUBLIC_URL}/assets/product-10.jpg`} alt="product" onClick={() => handleGalleryImageClick(`${process.env.PUBLIC_URL}/assets/product-10.jpg`)} />
                         </Link>
                         <h4>Black Shoes</h4>
@@ -177,7 +177,7 @@ function ProductDetails({ product }) {
                         </svg>50.00</p>
                     </div>
                     <div className="col-4">
-                        <Link to="/image/product-11">
+                        <Link to="/product-details/product-11">
                             <img src={`${process.env.PUBLIC_URL}/assets/product-11.jpg`} alt="product" onClick={() => handleGalleryImageClick(`${process.env.PUBLIC_URL}/assets/product-11.jpg`)} />
                         </Link>
                         <h4>Silver Shoes</h4>
@@ -193,7 +193,7 @@ function ProductDetails({ product }) {
                         </svg>50.00</p>
                     </div>
                     <div className="col-4">
-                        <Link to="/image/product-12">
+                        <Link to="/product-details/product-12">
                             <img src={`${process.env.PUBLIC_URL}/assets/product-12.jpg`} alt="product" onClick={() => handleGalleryImageClick(`${process.env.PUBLIC_URL}/assets/product-12.jpg`)} />
                         </Link>
                         <h4>Black Track Pant</h4>

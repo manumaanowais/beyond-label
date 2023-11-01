@@ -48,14 +48,14 @@ function Home() {
       image: `${process.env.PUBLIC_URL}/assets/sliderimage-1.jpg`,
       title: 'Winter Sale 50% Off',
       description: 'Find The Boundaries. Push Through!',
-      link: '/image/sliderimage-1',
+      link: '/product-details/sliderimage-1',
       backgroundColor: 'white',
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/sliderimage-2.jpg`,
       title: "Men's Latest Fashion Sale",
       description: 'Starting at RS. 999',
-      link: '/image/sliderimage-2',
+      link: '/product-details/sliderimage-2',
       backgroundColor: 'white',
     },
     // Add more content objects as needed
@@ -117,17 +117,17 @@ function Home() {
         <div className="small-container">
           <div className="row">
             <div className="col-3">
-              <Link to="/image/category-1">
+              <Link to="/product-details/category-1/">
                 <img alt='products' src={`${process.env.PUBLIC_URL}/assets/category-1.jpg`} />
               </Link>
             </div>
             <div className="col-3">
-              <Link to="/image/category-2">
+              <Link to="/product-details/category-2">
                 <img alt='products' src={`${process.env.PUBLIC_URL}/assets/category-2.jpg`} />
               </Link>
             </div>
             <div className="col-3">
-              <Link to="/image/category-3">
+              <Link to="/product-details/category-3">
                 <img alt='products' src={`${process.env.PUBLIC_URL}/assets/category-3.jpg`} />
               </Link>
             </div>
@@ -159,7 +159,7 @@ function Home() {
         <h2 className="title" id='newDropsProducts'>New Drops</h2>
         <div className="row">
           <div className="col-4">
-            <Link to="/image/product-1">
+            <Link to="/product-details/product-1">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-1.jpg`} />
             </Link>
             <h4>Red Printed T-Shirt</h4>
@@ -175,7 +175,7 @@ function Home() {
             </svg>50.00</p>
           </div>
           <div className="col-4">
-            <Link to="/image/product-2">
+            <Link to="/product-details/product-2">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-2.jpg`} />
             </Link>
             <h4>Black Shoes</h4>
@@ -191,7 +191,7 @@ function Home() {
             </svg>50.00</p>
           </div>
           <div className="col-4">
-            <Link to="/image/product-3">
+            <Link to="/product-details/product-3">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-3.jpg`} />
             </Link>
             <h4>Track Pant</h4>
@@ -207,7 +207,7 @@ function Home() {
             </svg>50.00</p>
           </div>
           <div className="col-4">
-            <Link to="/image/product-4">
+            <Link to="/product-details/product-4">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-4.jpg`} />
             </Link>
             <h4>Purple Puma T-Shirt</h4>
@@ -226,7 +226,7 @@ function Home() {
         <h2 className="title" id='trendingProducts'>Trending Products</h2>
         <div className="row">
           <div className="col-4">
-            <Link to="/image/product-5">
+            <Link to="/product-details/product-5">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-5.jpg`} />
             </Link>
             <h4>Silver color Shoes</h4>
@@ -242,7 +242,7 @@ function Home() {
             </svg>50.00</p>
           </div>
           <div className="col-4">
-            <Link to="/image/product-6">
+            <Link to="/product-details/product-6">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-6.jpg`} />
             </Link>
             <h4>Black Puma T-Shirt</h4>
@@ -258,7 +258,7 @@ function Home() {
             </svg>50.00</p>
           </div>
           <div className="col-4">
-            <Link to="/image/product-7">
+            <Link to="/product-details/product-7">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-7.jpg`} />
             </Link>
             <h4>HRX Socks</h4>
@@ -274,7 +274,7 @@ function Home() {
             </svg>50.00</p>
           </div>
           <div className="col-4">
-            <Link to="/image/product-8">
+            <Link to="/product-details/product-8">
               <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-8.jpg`} />
             </Link>
             <h4>Fossil Watches</h4>
@@ -293,7 +293,7 @@ function Home() {
           <h2 className="title" id='latestProducts'>Latest Products</h2>
           <div className="row">
             <div className="col-4">
-              <Link to="/image/product-9">
+              <Link to="/product-details/product-9">
                 <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-9.jpg`} />
               </Link>
               <h4>Roadster Watches</h4>
@@ -309,7 +309,7 @@ function Home() {
               </svg>50.00</p>
             </div>
             <div className="col-4">
-              <Link to="/image/product-10">
+              <Link to="/product-details/product-10">
                 <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-10.jpg`} />
               </Link>
               <h4>Black Shoes</h4>
@@ -325,7 +325,7 @@ function Home() {
               </svg>50.00</p>
             </div>
             <div className="col-4">
-              <Link to="/image/product-11">
+              <Link to="/product-details/product-11">
                 <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-11.jpg`} />
               </Link>
               <h4>Silver Shoes</h4>
@@ -341,7 +341,7 @@ function Home() {
               </svg>50.00</p>
             </div>
             <div className="col-4">
-              <Link to="/image/product-12">
+              <Link to="/product-details/product-12">
                 <img alt='products' src={`${process.env.PUBLIC_URL}/assets/product-12.jpg`} />
               </Link>
               <h4>Black Track Pant</h4>
@@ -370,7 +370,7 @@ function Home() {
                   <p>Exclusively Available On Beyond Lablel</p>
                   <h1>Smart Band 4</h1>
                   <small>The Mi smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small><br />
-                  <Link to='/image/exclusive' className="btn">Buy Now &#8594;</Link>
+                  <Link to='/product-details/exclusive' className="btn">Buy Now &#8594;</Link>
                 </div>
               </div>
             </div>

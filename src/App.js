@@ -20,7 +20,7 @@ function App() {
           <Route path="/forgotPassword" element={<ForgotPassword />} />
           <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<UserProfile />} />
-          <Route path="/image/:imageName" element={<ProductDetails />} />
+          <Route path="/product-details/:imageName" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </CartProvider>

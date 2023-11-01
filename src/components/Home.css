@@ -15,12 +15,13 @@
 }
 
 .next-btn, .prev-btn {
-    border-radius: 10px;
+    border-radius: 50%;
     background-color: orangered;
     color: white;
     border: 1px solid white;
     cursor: pointer;
     font-size: 15px;
+    padding: 10px;
 }
 
 .home-page-tabs {
