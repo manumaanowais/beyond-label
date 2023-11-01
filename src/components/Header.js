@@ -80,7 +80,7 @@ function Header() {
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleDrawerOpen}><MenuIcon /></IconButton>
-                    <Typography variant="h6" className='header-heading'><img src={`${process.env.PUBLIC_URL}/assets/beyond-logo.jpg`} />Beyond Label</Typography>
+                    <Typography variant="h6" className='header-heading'><img src={`${process.env.PUBLIC_URL}/assets/beyond-logo.jpg`} alt='logo' />Beyond Label</Typography>
                     <div className='header-right-toolbar'>
                         <Tooltip title="User Profile" arrow>
                             <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleProfileOpen}><PersonOutlinedIcon /></IconButton>
