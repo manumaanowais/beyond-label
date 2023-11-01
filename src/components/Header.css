@@ -35,7 +35,14 @@
 
 .header-heading {
     flex-grow: 1;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.header-heading img {
+    width: 100px;
+    border-radius: 5px;
 }
 
 .search-bar {
@@ -44,7 +51,7 @@
 
 @media (max-width: 768px) {
     .header-heading {
-        display: none;
+        display: none !important;
     }
 
     .header-right-toolbar {
