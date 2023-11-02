@@ -1,4 +1,3 @@
-// Cart.js
 import React from 'react';
 import { useCart } from './CartContext';
 import Header from './Header';
@@ -6,6 +5,7 @@ import Footer from './Footer';
 import DeleteForeverOutlinedIcon from '@material-ui/icons/DeleteForeverOutlined';
 import Tooltip from '@material-ui/core/Tooltip';
 import { IconButton, Button } from '@material-ui/core';
+import './Cart.css';
 
 function Cart() {
     const { state, dispatch } = useCart();
@@ -57,49 +57,98 @@ function Cart() {
                         <h5>Start Shopping Now</h5>
                     </div>
                 ) : (
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Size</th>
-                                <th>Subtotal</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {state?.cart?.map(item => (
-                                <tr key={`${item.id}-${item.size}`}>
-                                    <td>
-                                        <div className="cart-info">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/${item.name}.jpg`} alt={item.name} />
-                                            <div>
-                                                <p>{item.name}</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td className='increment-decrement-btn'>
-                                        <button className='decrement-btn' onClick={() => handleDecrement(item)}>-</button>
-                                        <span className='quantity-count'>{item.quantity}</span>
-                                        <button className='increment-btn' onClick={() => handleIncrement(item)}>+</button>
-                                    </td>
-                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
-                                    </svg>{item.price}</td>
-                                    <td>{item.size}</td>
-                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
-                                    </svg>{(item.quantity * item.price).toFixed(2)}</td>
-                                    <td className='cart-action'>
-                                        <Tooltip title="Remove" arrow>
-                                            <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => handleRemoveItem(item)}><DeleteForeverOutlinedIcon /></IconButton>
-                                        </Tooltip>
-                                    </td>
+                    <>
+                        <table className='table-items'>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Size</th>
+                                    <th>Subtotal</th>
+                                    <th>Remove</th>
                                 </tr>
+                            </thead>
+                            <tbody>
+                                {state?.cart?.map(item => (
+                                    <tr key={`${item.id}-${item.size}`}>
+                                        <td>
+                                            <div className="cart-info">
+                                                <img src={`${process.env.PUBLIC_URL}/assets/${item.name}.jpg`} alt={item.name} />
+                                                <div>
+                                                    <p>{item.name}</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td className='increment-decrement-btn'>
+                                            <button className='decrement-btn' onClick={() => handleDecrement(item)}>-</button>
+                                            <span className='quantity-count'>{item.quantity}</span>
+                                            <button className='increment-btn' onClick={() => handleIncrement(item)}>+</button>
+                                        </td>
+                                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                                        </svg>{item.price}</td>
+                                        <td>{item.size}</td>
+                                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                                        </svg>{(item.quantity * item.price).toFixed(2)}</td>
+                                        <td className='cart-action'>
+                                            <Tooltip title="Remove" arrow>
+                                                <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => handleRemoveItem(item)}><DeleteForeverOutlinedIcon /></IconButton>
+                                            </Tooltip>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+
+
+                        <div className="cart-items">
+                            {state?.cart?.map(item => (
+                                <div key={`${item.id}-${item.size}`} className="cart-item">
+                                    <div className="cart-info">
+                                        <img src={`${process.env.PUBLIC_URL}/assets/${item.name}.jpg`} alt={item.name} />
+                                    </div>
+                                    <div className='item-details'>
+                                        <div className='item-name'>
+                                            <p>{item.name}</p>
+                                        </div>
+                                        <div className='increment-decrement-btn'>
+                                            <button className='decrement-btn' onClick={() => handleDecrement(item)}>-</button>
+                                            <span className='quantity-count'>{item.quantity}</span>
+                                            <button className='increment-btn' onClick={() => handleIncrement(item)}>+</button>
+                                        </div>
+                                        <div className='item-price'>
+                                            Price :
+                                            <span className='price'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                                    <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                                                </svg> {item.price}
+                                            </span>
+                                        </div>
+                                        <div className='item-size'>
+                                            Size :
+                                            <span className='size'> {item.size}</span>
+                                        </div>
+                                        <div className='item-subtotal'>
+                                            Total :
+                                            <span className='price'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                                    <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                                                </svg>{(item.quantity * item.price).toFixed(2)}
+                                            </span>
+                                        </div>
+                                        <div className='cart-action'>
+                                            Remove
+                                            <Tooltip title="Remove" arrow>
+                                                <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => handleRemoveItem(item)}><DeleteForeverOutlinedIcon /></IconButton>
+                                            </Tooltip>
+                                        </div>
+                                    </div>
+                                </div>
                             ))}
-                        </tbody>
-                    </table>
+                        </div>
+                    </>
                 )}
 
                 {totalSubtotal > 0 ? (
@@ -114,13 +163,17 @@ function Cart() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
-                                    </svg>{totalSubtotal.toFixed(2)}</td>
+                                    <td className='inr-svg'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                                        </svg>{totalSubtotal.toFixed(2)}
+                                    </td>
                                     <td>10%</td>
-                                    <td className='inr-svg'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
-                                    </svg>{(totalSubtotal + calculateTax(totalSubtotal)).toFixed(2)}</td>
+                                    <td className='inr-svg'>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                            <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z" />
+                                        </svg>{(totalSubtotal + calculateTax(totalSubtotal)).toFixed(2)}
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -128,7 +181,7 @@ function Cart() {
                 ) : ('')}
 
                 {state.cart.length !== 0 ? (
-                    <div style={{marginTop: '20px', display: 'flex', justifyContent: 'center', gap: '12px'}}>
+                    <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'center', gap: '12px' }}>
                         <Button type='button' color='secondary' variant="outlined" style={btnstyle} onClick={handleClearCart}>CLEAR CART</Button>
                         <Button type='button' color='primary' variant="contained" style={btnstyle} onClick={handleBuyNow}>BUY NOW</Button>
                     </div>) : ('')}

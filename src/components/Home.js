@@ -35,14 +35,22 @@ function Home() {
     document.getElementById('latestProducts').scrollIntoView();
   }
 
-
   const carouselContent = useMemo(() => [
+    {
+      image: `${process.env.PUBLIC_URL}/assets/sliderimage-3.jpg`,
+      title: 'Welcome to Our Store',
+      description: "Find the perfect fit for your everyday comfort.",
+      link: '/home',
+      backgroundColor: 'black',
+      color: 'white'
+    },
     {
       image: `${process.env.PUBLIC_URL}/assets/image1.jpg`,
       title: 'Give Your Workout A New Style!',
       description: "Success isn't always about greatness. It's about consistency. Consistent hardwork gains success. Greatness will come",
       link: '/home',
-      backgroundColor: '#e6e6e6'
+      backgroundColor: '#e6e6e6',
+      color:'black'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/sliderimage-1.jpg`,
@@ -50,6 +58,7 @@ function Home() {
       description: 'Find The Boundaries. Push Through!',
       link: '/product-details/sliderimage-1',
       backgroundColor: 'white',
+      color:'black'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/sliderimage-2.jpg`,
@@ -57,6 +66,7 @@ function Home() {
       description: 'Starting at RS. 999',
       link: '/product-details/sliderimage-2',
       backgroundColor: 'white',
+      color:'black'
     },
     // Add more content objects as needed
   ], []);
@@ -88,11 +98,11 @@ function Home() {
       {/* eslint-disable-next-line */}
       <marquee style={{ fontSize: '18px', paddingTop: '10px' }}>Trendiest Sale Is Live! Get 50% Off On Your Favourite Outfits</marquee>
       <div className='main-home-content'>
-        <div className='header' style={{ backgroundColor: currentContent.backgroundColor }}>
+        <div className='header' style={{ backgroundColor: currentContent.backgroundColor}}>
           <div className="row">
             <div className="col-2">
-              <h1>{currentContent.title}</h1>
-              <p>{currentContent.description}</p>
+              <h1 style={{color: currentContent.color}}>{currentContent.title}</h1>
+              <p style={{color: currentContent.color}}>{currentContent.description}</p>
               <Link to={currentContent.link} className="btn">
                 Explore Now &#8594;
               </Link>
